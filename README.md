@@ -2,6 +2,7 @@
 
 ## Requirements
 * Python 2.7
+* Slack API Token (https://api.slack.com/custom-integrations/legacy-tokens)
 
 ## How to use
 * Just run slack-taco-bot.py
