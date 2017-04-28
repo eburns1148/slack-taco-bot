@@ -12,7 +12,7 @@ This Slack Bot is used to send 5 tacos to a specified user and channel at a spec
 
 ### Installation
 * Clone this repository
-* Run the ```pip3 install -r requirements.txt``` in the cloned directory
+* Run the ```pip3 install -r requirements.txt```
 * Choose a method below
 
 
