@@ -19,14 +19,19 @@ class SlackTacoBot:
         self.slackClient = SlackClient(slackApiToken)
     
     def start(self):
+
+        print('Slack Channel Name: #' + self.channelName)
+        print('Slack User Name: @' + self.userName)
+        
         schedule.every().day.at(self.dailyTime).do(self._sendTacos)
         print('Running SlackTacoBot everyday at ' + self.dailyTime)
         
-        schedule.run_pending()
-        time.sleep(60)
+        while True:
+            schedule.run_pending()
+            time.sleep(60)
         
     def _sendTacos(self):
-        print('Sending tacos to @' + self.userName + ' on channel #' + self.channelName)
+        print('Sending TACOS to @' + self.userName + ' on channel #' + self.channelName)
     
         text = '<@'+ self.userName +'> :taco: :taco: :taco: :taco: :taco:'
     

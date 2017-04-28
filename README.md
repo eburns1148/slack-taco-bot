@@ -1,15 +1,24 @@
 # Slack Taco Bot
 
+## Description
+
+This Slack Bot is used to send 5 tacos to a specified user and channel at a specific time everyday
+
 ## Requirements
 * Python 2.7
 * Slack API Token (https://api.slack.com/custom-integrations/legacy-tokens)
 
-
 ## How to use
 
-The bot runs Every day at a specified time
+### Installation
+* Clone this repository
+* Run the ```pip install -r requirements.txt``` in the cloned directory
+* Choose a method below
+
 
 ### Default - bot_runner.py
+Requires file modifications to bot_runner.py
+
 * Modify bot_runner.py
   * Set the Slack API Key
   * Set the Slack Channel Name without the '#' symbol
@@ -19,6 +28,8 @@ The bot runs Every day at a specified time
 * Sit back and eat tacos
 
 ### Wizard - bot_runner_wizard.py
+Does not require file modifications to any file
+
 * Run bot_runner_wizard.py
   * Enter your Slack API Key
   * Enter the Slack Channel name without the '#' symbol
