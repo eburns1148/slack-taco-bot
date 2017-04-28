@@ -24,13 +24,13 @@ Requires file modifications to bot_runner.py
   * Set the Slack Channel Name without the '#' symbol
   * Set the Slack User Name without the '@' symbol
   * Set the scheduled time using 24-hr clock (Ex. 9:00 is 9:00AM, 13:00 is 1:00PM)
-* Run bot_runner.py
+* Run bot_runner.py using ```python3 bot_runner.py``` or ```python bot_runner.py```
 * Sit back and eat tacos
 
 ### Wizard - bot_runner_wizard.py
 Does not require file modifications to any file
 
-* Run bot_runner_wizard.py
+* Run bot_runner_wizard.py using ```python3 bot_runner_wizard.py``` or ```python bot_runner_wizard.py```
   * Enter your Slack API Key
   * Enter the Slack Channel name without the '#' symbol
   * Enter the Slack Username without the '@' symbol
