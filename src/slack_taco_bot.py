@@ -48,4 +48,4 @@ class SlackTacoBot:
             as_user="true")
         
     def _slackBotPrint(self, message):
-        print('[' + str(datetime.now()) + ']' + '[SlackTacoBot] : ' + message)
+        print('[' + str(datetime.now()) + ']    ' + '[SlackTacoBot] : ' + message)
