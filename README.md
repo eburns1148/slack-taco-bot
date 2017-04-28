@@ -31,6 +31,7 @@ Requires file modifications to bot_runner.py
 Does not require file modifications to any file
 
 * Run bot_runner_wizard.py using ```python3 bot_runner_wizard.py``` or ```python bot_runner_wizard.py```
+  * Enter all values with double quotes
   * Enter your Slack API Key
   * Enter the Slack Channel name without the '#' symbol
   * Enter the Slack Username without the '@' symbol

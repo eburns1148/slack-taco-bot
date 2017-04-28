@@ -8,8 +8,11 @@ Created on Apr 28, 2017
 '''
 
 from slackclient import SlackClient
+
+from datetime import datetime
 import schedule
 import time
+
 
 
 class SlackTacoBot:
@@ -23,18 +26,18 @@ class SlackTacoBot:
     
     def start(self):
 
-        print('Slack Channel Name: #' + self.channelName)
-        print('Slack User Name: @' + self.userName)
+        self._slackBotPrint('Slack Channel Name: #' + self.channelName)
+        self._slackBotPrint('Slack User Name: @' + self.userName)
         
         schedule.every().day.at(self.dailyTime).do(self._sendTacos)
-        print('Running SlackTacoBot everyday at ' + self.dailyTime)
+        self._slackBotPrint('Running SlackTacoBot everyday at ' + self.dailyTime)
         
         while True:
             schedule.run_pending()
-            time.sleep(60)
+            time.sleep(5)
         
     def _sendTacos(self):
-        print('Sending TACOS to @' + self.userName + ' on channel #' + self.channelName)
+        self._slackBotPrint('Sending TACOS to @' + self.userName + ' on channel #' + self.channelName)
     
         text = '<@'+ self.userName +'> :taco: :taco: :taco: :taco: :taco:'
     
@@ -43,4 +46,6 @@ class SlackTacoBot:
             channel=self.channelName,
             text=text,
             as_user="true")
-
+        
+    def _slackBotPrint(self, message):
+        print('[' + str(datetime.now()) + ']' + '[SlackTacoBot] : ' + message)
