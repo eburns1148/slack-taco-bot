@@ -39,13 +39,14 @@ class SlackTacoBot:
     def _sendTacos(self):
         self._slackBotPrint('Sending TACOS to @' + self.userName + ' on channel #' + self.channelName)
     
-        text = '<@'+ self.userName +'> :taco: :taco: :taco: :taco: :taco:'
+        text = '@'+ self.userName +' :taco: :taco: :taco: :taco: :taco:'
     
         self.slackClient.api_call(
             "chat.postMessage",
             channel=self.channelName,
             text=text,
-            as_user="true")
+            as_user="true",
+            parse="full")
         
     def _slackBotPrint(self, message):
-        print('[' + str(datetime.now()) + ']    ' + '[SlackTacoBot] : ' + message)
+        print('[' + str(datetime.now()) + '] ' + '[SlackTacoBot] : ' + message)
